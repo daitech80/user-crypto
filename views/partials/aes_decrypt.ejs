@@ -1,0 +1,14 @@
+<div id="aes-decrypt">
+    <h2>AES Decryption</h2>
+    <form action="/aes/decrypt" method="post">
+        <label for="aes-encrypted-text">Encrypted Text:</label>
+        <input type="text" id="aes-encrypted-text" name="encryptedData" required>
+        <label for="aes-iv">IV:</label>
+        <input type="text" id="aes-iv" name="iv" required>
+        <input type="submit" value="Decrypt">
+    </form>
+    <% if (cryptodata.decryptedText) { %>
+        <h3>Decrypted Text:</h3>
+        <p><%= cryptodata.decryptedText %></p>
+    <% } %>
+    </div>

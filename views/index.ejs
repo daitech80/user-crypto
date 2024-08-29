@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css"/>
+    <title>Crypto Client</title>
+</head>
+<body class="simple-style" onload="menuOption(<%= cryptodata.menuItem %>)">
+
+    <%- include('partials/menunav') %>
+    <%- include('partials/aes_encrypt') %>
+    <%- include('partials/aes_decrypt') %>
+    <%- include('partials/sha_hash') %>
+    <%- include('partials/rsa_keys') %>
+    <%- include('partials/rsa_encrypt') %>
+    <%- include('partials/rsa_decrypt') %>
+
+    <h2>Operation Results:</h2>
+    <ul>
+        <% results.forEach(result => { %>
+            <li><strong><%= result.type %>:</strong> <%= JSON.stringify(result.data) %></li>
+        <% }) %>
+
+
+      
+    </ul>
+
+    <br><br><br>
+
+</body>
+</html>
