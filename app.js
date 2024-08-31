@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const connode = require('./database/mydb')
 const app = express();
-const PORT = 3000;
+const PORT = 4002;
 
 // Connect to MongoDB
 connode()
