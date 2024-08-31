@@ -60,7 +60,7 @@ function aesEncrypt(text) {
  exports.aesEncrypt = async (req, res) => {
      const { text } = req.body;
      const encryptedData = aesEncrypt(text);
-     await CryptoModel.create({ type: 'AES Encrypt', data: encryptedData.encryptedData });
+     await CryptoModel.create({ type: 'AES Encrypt', data: encryptedData });
      res.render('index', { cryptodata: { encryptedData } });
  };
 

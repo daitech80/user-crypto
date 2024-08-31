@@ -1,8 +1,8 @@
 body.simple-style {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4ef;
     margin: 0;
-    padding: 20px;
+    padding: 25px;
     background-image: url(../assets/image/cryptoclient.jpg);
     display: flex;
     justify-content: center;
@@ -27,22 +27,22 @@ h3{
 }
 
 button {
-    background-color: #4CAF50; 
+    background-color: #1013e4c6; 
     color: white;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 12px 25px;
+    margin: 6px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    transition: background-color 0.4s ease;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-.crypto-form {
+.crypForm {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -51,18 +51,18 @@ button:hover {
     margin: 0 auto 20px;
 }
 
-.crypto-form form {
+.crypForm form {
     display: flex;
     flex-direction: column;
 }
 
-.crypto-form label {
+.crypForm label {
     font-weight: bold;
     margin-top: 10px;
 }
 
-.crypto-form input[type="text"],
-.crypto-form textarea {
+.crypForm input[type="text"],
+.crypForm textarea {
     padding: 10px;
     margin: 5px 0 20px;
     border: 1px solid #ccc;
@@ -71,16 +71,16 @@ button:hover {
     width: 100%;
 }
 
-.crypto-form textarea {
+.crypForm textarea {
     resize: vertical;
     height: 100px;
 }
 
-.crypto-form button {
+.crypForm button {
     align-self: flex-start;
 }
 
-.crypto-form p {
+.crypForm p {
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
@@ -109,7 +109,7 @@ strong {
         padding: 10px;
     }
 
-    .crypto-form {
+    .crypForm {
         padding: 15px;
         margin-bottom: 15px;
     }

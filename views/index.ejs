@@ -8,7 +8,7 @@
     <script>
         function showForm(formId) {
             // Hide all forms in thgis section
-            document.querySelectorAll('.crypto-form').forEach(form => {
+            document.querySelectorAll('.crypForm').forEach(form => {
                 form.style.display = 'none';
             });
             // Show the selected form in here
@@ -28,7 +28,7 @@
     <button onclick="showForm('rsa-decrypt-form')">RSA Decrypt</button>
 
     <!-- This is The AES(advanced encryption standard) Encrypt Form -->
-    <section id="aes-encrypt-form" class="crypto-form" style="display:none;">
+    <section id="aes-encrypt-form" class="crypForm" style="display:none;">
         <h3>AES Encryption</h3>
         <form action="/aes/encrypt" method="POST">
             <label for="aes-encrypt-text">Text to Encrypt:</label>
@@ -46,7 +46,7 @@
     </section>
 
     <!-- This is the AES Decrypt Form -->
-    <section id="aes-decrypt-form" class="crypto-form" style="display:none;">
+    <section id="aes-decrypt-form" class="crypForm" style="display:none;">
         <h3>AES Decryption</h3>
         <form action="/aes/decrypt" method="POST">
             <label for="aes-decrypt-data">Encrypted Data:</label>
@@ -64,7 +64,7 @@
     </section>
 
     <!-- This is th SHA-256 Hash Form -->
-    <section id="sha-hash-form" class="crypto-form" style="display:none;">
+    <section id="sha-hash-form" class="crypForm" style="display:none;">
         <h3>SHA-256 Hashing</h3>
         <form action="/sha256/hash" method="POST">
             <label for="sha-hash-text">Text to Hash:</label>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- This is the RSA Key Generation Form -->
-    <section id="rsa-keys-form" class="crypto-form" style="display:none;">
+    <section id="rsa-keys-form" class="crypForm" style="display:none;">
         <h3>Generate RSA Keys</h3>
         <form action="/rsa/generate" method="POST">
             <button type="submit">Generate Keys</button>
@@ -91,7 +91,7 @@
     </section>
 
     <!-- This is the  RSA Encrypt Form -->
-    <section id="rsa-encrypt-form" class="crypto-form" style="display:none;">
+    <section id="rsa-encrypt-form" class="crypForm" style="display:none;">
         <h3>RSA Encryption</h3>
         <form action="/rsa/encrypt" method="POST">
             <label for="rsa-encrypt-key">Public Key:</label>
@@ -107,7 +107,7 @@
     </section>
 
     <!-- This is the RSA Decrypt Form -->
-    <section id="rsa-decrypt-form" class="crypto-form" style="display:none;">
+    <section id="rsa-decrypt-form" class="crypForm" style="display:none;">
         <h3>RSA Decryption</h3>
         <form action="/rsa/decrypt" method="POST">
             <label for="rsa-decrypt-key">Private Key:</label>
