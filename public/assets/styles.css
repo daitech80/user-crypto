@@ -3,16 +3,31 @@ body.simple-style {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    background-image: url(../assets/image/cryptoclient.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h2, h3 {
-    color: #333;
+.alldiv{
+    background-color: rgba(255, 228, 196, 0.248);
+    padding: 10px 20px;
+    height: auto;
+    
+}
+h2{
+    color: #f9eeee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h3{
+    color: #1e097b;
     text-align: center;
     margin-bottom: 20px;
 }
 
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 20px;
     margin: 5px;
@@ -86,7 +101,7 @@ ul li {
 }
 
 strong {
-    color: #333;
+    color: hsla(260, 93%, 24%, 0.878);
 }
 
 @media (max-width: 768px) {

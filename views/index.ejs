@@ -7,16 +7,17 @@
     <title>Crypto Client</title>
     <script>
         function showForm(formId) {
-            // Hide all forms
+            // Hide all forms in thgis section
             document.querySelectorAll('.crypto-form').forEach(form => {
                 form.style.display = 'none';
             });
-            // Show the selected form
+            // Show the selected form in here
             document.getElementById(formId).style.display = 'block';
         }
     </script>
 </head>
 <body class="simple-style">
+<div class="alldiv">
 
     <h2>Select Operation| ኦፕሬሽንን ይምረጡ:</h2>
     <button onclick="showForm('aes-encrypt-form')">AES Encrypt</button>
@@ -26,7 +27,7 @@
     <button onclick="showForm('rsa-encrypt-form')">RSA Encrypt</button>
     <button onclick="showForm('rsa-decrypt-form')">RSA Decrypt</button>
 
-    <!-- AES Encrypt Form -->
+    <!-- This is The AES(advanced encryption standard) Encrypt Form -->
     <section id="aes-encrypt-form" class="crypto-form" style="display:none;">
         <h3>AES Encryption</h3>
         <form action="/aes/encrypt" method="POST">
@@ -34,14 +35,17 @@
             <input type="text" id="aes-encrypt-text" name="text" required>
             <button type="submit">Encrypt</button>
         </form>
+        
         <% if (cryptodata.encryptedData) { %>
             <h3>Encrypted Data:</h3>
             <p><strong>IV:</strong> <%= cryptodata.encryptedData.iv %></p>
             <p><strong>Encrypted Text:</strong> <%= cryptodata.encryptedData.encryptedData %></p>
+            
+
         <% } %>
     </section>
 
-    <!-- AES Decrypt Form -->
+    <!-- This is the AES Decrypt Form -->
     <section id="aes-decrypt-form" class="crypto-form" style="display:none;">
         <h3>AES Decryption</h3>
         <form action="/aes/decrypt" method="POST">
@@ -51,13 +55,15 @@
             <input type="text" id="aes-decrypt-iv" name="iv" required>
             <button type="submit">Decrypt</button>
         </form>
+        
         <% if (cryptodata.decryptedText) { %>
             <h3>Decrypted Text:</h3>
             <p><%= cryptodata.decryptedText %></p>
+            
         <% } %>
     </section>
 
-    <!-- SHA-256 Hash Form -->
+    <!-- This is th SHA-256 Hash Form -->
     <section id="sha-hash-form" class="crypto-form" style="display:none;">
         <h3>SHA-256 Hashing</h3>
         <form action="/sha256/hash" method="POST">
@@ -71,7 +77,7 @@
         <% } %>
     </section>
 
-    <!-- RSA Key Generation Form -->
+    <!-- This is the RSA Key Generation Form -->
     <section id="rsa-keys-form" class="crypto-form" style="display:none;">
         <h3>Generate RSA Keys</h3>
         <form action="/rsa/generate" method="POST">
@@ -84,7 +90,7 @@
         <% } %>
     </section>
 
-    <!-- RSA Encrypt Form -->
+    <!-- This is the  RSA Encrypt Form -->
     <section id="rsa-encrypt-form" class="crypto-form" style="display:none;">
         <h3>RSA Encryption</h3>
         <form action="/rsa/encrypt" method="POST">
@@ -100,7 +106,7 @@
         <% } %>
     </section>
 
-    <!-- RSA Decrypt Form -->
+    <!-- This is the RSA Decrypt Form -->
     <section id="rsa-decrypt-form" class="crypto-form" style="display:none;">
         <h3>RSA Decryption</h3>
         <form action="/rsa/decrypt" method="POST">
@@ -116,13 +122,14 @@
         <% } %>
     </section>
 
-    <!-- Operation Results -->
-    <h2>Operation Results:</h2>
+    <!-- Operation Results show area -->
+    <h2>Operation Results area:</h2>
     <ul>
         <% results.forEach(result => { %>
             <li><strong><%= result.type %>:</strong> <%= JSON.stringify(result.data) %></li>
         <% }) %>
     </ul>
 
+</div>
 </body>
 </html>
